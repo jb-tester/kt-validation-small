@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class KtValidationSmallApplication
 
 fun main(args: Array<String>) {
-	runApplication<KtValidationSmallApplication>(*args)
+    runApplication<KtValidationSmallApplication>(*args)
 }

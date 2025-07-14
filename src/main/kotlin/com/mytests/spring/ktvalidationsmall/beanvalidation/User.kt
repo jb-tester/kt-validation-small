@@ -5,7 +5,7 @@ import java.time.LocalDate
 import java.util.*
 
 class User {
-    var name: @NotNull(message = "Name cannot be null") String? = null
+    @NotNull(message = "Name cannot be null") var name:  String? = null
 
     var isWorking: @AssertTrue Boolean = false
 
@@ -26,7 +26,7 @@ class User {
 
     private var dateOfBirth: LocalDate? = null
 
-    fun getDateOfBirth(): Optional<LocalDate?> {
+    fun getDateOfBirth(): Optional<@Past LocalDate> {
         return Optional.ofNullable<@Past LocalDate?>(dateOfBirth)
     }
 
