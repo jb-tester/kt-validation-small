@@ -1,0 +1,68 @@
+### validation is performed
+POST http://localhost:8080/annotated-field-vals
+Content-Type: application/json
+
+{
+  "name": "john",
+  "birthday": "2026-01-01",
+  "age": 20,
+  "email": "user@example.com"
+}
+
+### validation is performed
+POST http://localhost:8080/annotated-vals-in-body
+Content-Type: application/json
+
+{
+  "name": "john",
+  "birthday": "2026-01-01",
+  "age": 20,
+  "email": "user@example.com"
+}
+
+### validation is performed
+POST http://localhost:8080/annotated-vars-in-body
+Content-Type: application/json
+
+{
+  "name": "john",
+  "birthday": "2026-01-01",
+  "age": 20,
+  "email": "user@example.com"
+}
+
+### validation is NOT performed
+POST http://localhost:8080/annotated-vals-in-constructor
+Content-Type: application/json
+
+{
+  "name": "john",
+  "birthday": "2026-01-01",
+  "age": 20,
+  "email": "user@example.com"
+}
+
+### validation is NOT performed
+POST http://localhost:8080/vars-with-annotated-types
+Content-Type: application/json
+
+{
+  "name": "john",
+  "birthday": "2026-01-01",
+  "age": 20,
+  "email": "user@example.com"
+}
+### validation is NOT performed
+POST http://localhost:8080/annotated-vars-in-constructor
+Content-Type: application/json
+
+{
+  "name": "john",
+  "birthday": "2026-01-01",
+  "age": 20,
+  "email": "user@example.com"
+}
+
+
+###
+
