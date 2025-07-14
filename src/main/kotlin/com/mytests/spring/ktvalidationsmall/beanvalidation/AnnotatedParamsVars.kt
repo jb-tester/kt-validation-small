@@ -9,12 +9,12 @@ import jakarta.validation.constraints.NotNull
 import jakarta.validation.constraints.Past
 import java.time.LocalDate
 
+
 // here all validations will be ignored!
 // However, IDEA reports no errors
-class AnnotatedVarsInConstructor(
-    @NotNull @NotEmpty var name: String?,
-    @NotNull @Past var birthday: LocalDate? = null,
-    @Min(0) @Max(130) var age: Int? = null,
-    @NotBlank @Email var email: String? = null
+class AnnotatedParamsVars(
+    @param:NotNull @param:NotEmpty var name: String?,
+    @param:NotNull @param:Past var birthday: LocalDate? = null,
+    @param:Min(0) @param:Max(130) var age: Int? = null,
+    @param:NotBlank @param:Email var email: String? = null,
 )
-

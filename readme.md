@@ -8,8 +8,8 @@ Problems:
 2. inspection reports the `@NotNull` annotations only, other constraints are ignored
 3. actually, Hibernate Validator doesn't require the properties to be mutable. Turning `val` to `var` doesn't guarantee that the property will be validated.
 The annotation should be used for field, not for parameter. Thus, 
-`val` annotated with `@field:NotNull` is not a problem. But,
-`var` constructor parameter annotated with `@NotNull` is.
+`val` annotated with `@field:NotNull` is not a problem. Same - for `@get:NotNull`-annotated `var` parameter.
+But `var` constructor parameter annotated with `@NotNull` is.
 `val` field annotated with `@NotNull` is not a problem. But,
 `var` constructor parameter annotated with `@param:NotNull` is.
 Also, the inspection doesn't report the errors when the type of the `var` property is annotated with some constraint instead of the field itself.
